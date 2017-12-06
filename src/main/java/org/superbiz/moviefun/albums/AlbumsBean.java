@@ -34,7 +34,7 @@ public class AlbumsBean {
     public void addAlbum(Album album) {
         entityManager.persist(album);
     }
-
+    
     public List<Album> getAlbums() {
         CriteriaQuery<Album> cq = entityManager.getCriteriaBuilder().createQuery(Album.class);
         cq.select(cq.from(Album.class));
